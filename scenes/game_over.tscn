@@ -1,0 +1,280 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/game_over.gd" id="1_gameover"]
+[ext_resource type="PackedScene" path="res://scenes/characters/witch.tscn" id="2_witch"]
+
+[sub_resource type="StyleBoxFlat" id="score_panel_style"]
+bg_color = Color(0.14, 0.14, 0.18, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.35, 0.32, 0.28, 0.8)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="xp_panel_style"]
+bg_color = Color(0.12, 0.12, 0.16, 0.8)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.831, 0.686, 0.216, 0.4)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="xp_bar_bg"]
+bg_color = Color(0.2, 0.2, 0.24, 0.5)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="xp_bar_fill"]
+bg_color = Color(0.831, 0.686, 0.216, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="GameOver" type="Node2D"]
+script = ExtResource("1_gameover")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 720.0
+offset_bottom = 1280.0
+color = Color(0.09, 0.09, 0.12, 1)
+
+[node name="BackgroundGradient" type="ColorRect" parent="."]
+offset_top = 640.0
+offset_right = 720.0
+offset_bottom = 1280.0
+color = Color(0.06, 0.06, 0.09, 0.5)
+
+[node name="Witch" parent="." instance=ExtResource("2_witch")]
+position = Vector2(560, 400)
+scale = Vector2(1.4, 1.4)
+
+[node name="TitleLabel" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 150.0
+offset_right = 500.0
+offset_bottom = 220.0
+theme_override_font_sizes/font_size = 46
+theme_override_colors/font_color = Color(0.92, 0.9, 0.82, 1)
+text = "FIN DU CONTE"
+horizontal_alignment = 1
+
+[node name="NewRecordLabel" type="Label" parent="."]
+visible = false
+offset_left = 120.0
+offset_top = 230.0
+offset_right = 600.0
+offset_bottom = 270.0
+theme_override_font_sizes/font_size = 28
+theme_override_colors/font_color = Color(0.831, 0.686, 0.216, 1)
+text = "★ NOUVEAU RECORD ★"
+horizontal_alignment = 1
+
+[node name="ScorePanel" type="Panel" parent="."]
+offset_left = 80.0
+offset_top = 530.0
+offset_right = 640.0
+offset_bottom = 700.0
+theme_override_styles/panel = SubResource("score_panel_style")
+
+[node name="ScoreTitle" type="Label" parent="ScorePanel"]
+offset_left = 20.0
+offset_top = 12.0
+offset_right = 540.0
+offset_bottom = 36.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.7, 0.67, 0.6, 0.8)
+text = "Score final"
+horizontal_alignment = 1
+
+[node name="FinalScoreValue" type="Label" parent="ScorePanel"]
+offset_left = 20.0
+offset_top = 38.0
+offset_right = 540.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 44
+theme_override_colors/font_color = Color(0.831, 0.686, 0.216, 1)
+text = "0"
+horizontal_alignment = 1
+
+[node name="RecordTitle" type="Label" parent="ScorePanel"]
+offset_left = 20.0
+offset_top = 105.0
+offset_right = 270.0
+offset_bottom = 128.0
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.7, 0.67, 0.6, 0.7)
+text = "★ Record"
+
+[node name="RecordValue" type="Label" parent="ScorePanel"]
+offset_left = 280.0
+offset_top = 105.0
+offset_right = 540.0
+offset_bottom = 128.0
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.831, 0.686, 0.216, 1)
+text = "0"
+horizontal_alignment = 2
+
+[node name="XPPanel" type="Panel" parent="."]
+offset_left = 80.0
+offset_top = 715.0
+offset_right = 640.0
+offset_bottom = 920.0
+theme_override_styles/panel = SubResource("xp_panel_style")
+
+[node name="XPRecapTitle" type="Label" parent="XPPanel"]
+offset_left = 20.0
+offset_top = 8.0
+offset_right = 540.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.941, 0.91, 0.816, 0.6)
+text = "EXPÉRIENCE GAGNÉE"
+horizontal_alignment = 1
+
+[node name="XPBaseLabel" type="Label" parent="XPPanel"]
+offset_left = 30.0
+offset_top = 38.0
+offset_right = 320.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.941, 0.91, 0.816, 0.8)
+text = "Participation"
+
+[node name="XPBaseValue" type="Label" parent="XPPanel"]
+offset_left = 320.0
+offset_top = 38.0
+offset_right = 530.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.831, 0.686, 0.216, 1)
+text = "+ 10"
+horizontal_alignment = 2
+
+[node name="XPScoreLabel" type="Label" parent="XPPanel"]
+offset_left = 30.0
+offset_top = 62.0
+offset_right = 320.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.941, 0.91, 0.816, 0.8)
+text = "Score"
+
+[node name="XPScoreValue" type="Label" parent="XPPanel"]
+offset_left = 320.0
+offset_top = 62.0
+offset_right = 530.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.831, 0.686, 0.216, 1)
+text = "+ 0"
+horizontal_alignment = 2
+
+[node name="XPLinesLabel" type="Label" parent="XPPanel"]
+offset_left = 30.0
+offset_top = 86.0
+offset_right = 320.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.941, 0.91, 0.816, 0.8)
+text = "Lignes effacées"
+
+[node name="XPLinesValue" type="Label" parent="XPPanel"]
+offset_left = 320.0
+offset_top = 86.0
+offset_right = 530.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.831, 0.686, 0.216, 1)
+text = "+ 0"
+horizontal_alignment = 2
+
+[node name="Separator" type="ColorRect" parent="XPPanel"]
+offset_left = 30.0
+offset_top = 112.0
+offset_right = 530.0
+offset_bottom = 114.0
+color = Color(0.831, 0.686, 0.216, 0.4)
+
+[node name="XPTotalLabel" type="Label" parent="XPPanel"]
+offset_left = 30.0
+offset_top = 120.0
+offset_right = 530.0
+offset_bottom = 145.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.831, 0.686, 0.216, 1)
+text = "= 10 XP"
+horizontal_alignment = 2
+
+[node name="XPBar" type="ProgressBar" parent="XPPanel"]
+offset_left = 20.0
+offset_top = 155.0
+offset_right = 540.0
+offset_bottom = 175.0
+theme_override_styles/background = SubResource("xp_bar_bg")
+theme_override_styles/fill = SubResource("xp_bar_fill")
+max_value = 100.0
+value = 0.0
+show_percentage = false
+
+[node name="LevelLabel" type="Label" parent="XPPanel"]
+offset_left = 20.0
+offset_top = 180.0
+offset_right = 540.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.941, 0.91, 0.816, 0.7)
+text = "Niv. 1 — Apprenti"
+horizontal_alignment = 1
+
+[node name="LevelUpLabel" type="Label" parent="."]
+visible = false
+offset_left = 140.0
+offset_top = 300.0
+offset_right = 580.0
+offset_bottom = 400.0
+theme_override_font_sizes/font_size = 34
+theme_override_colors/font_color = Color(0.831, 0.686, 0.216, 1)
+text = "✦ NIVEAU 2 ✦
+Apprenti"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ContinueButton" type="Button" parent="."]
+offset_left = 160.0
+offset_top = 950.0
+offset_right = 560.0
+offset_bottom = 1000.0
+theme_override_font_sizes/font_size = 22
+text = "🧪 Continuer"
+
+[node name="RestartButton" type="Button" parent="."]
+offset_left = 160.0
+offset_top = 1020.0
+offset_right = 560.0
+offset_bottom = 1070.0
+theme_override_font_sizes/font_size = 24
+text = "✦ RECOMMENCER ✦"
+
+[node name="HomeButton" type="Button" parent="."]
+offset_left = 240.0
+offset_top = 1090.0
+offset_right = 480.0
+offset_bottom = 1135.0
+theme_override_font_sizes/font_size = 20
+text = "🏠 Retour"
+
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="HomeButton" to="." method="_on_home_pressed"]

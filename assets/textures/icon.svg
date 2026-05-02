@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#13131b"/>
+      <stop offset="100%" stop-color="#0c0c14"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="108" fill="url(#bg)"/>
+
+  <!-- Subtle ambient shapes -->
+  <circle cx="58" cy="430" r="42" fill="#3a4878" opacity="0.07"/>
+  <circle cx="462" cy="78" r="34" fill="#7a4878" opacity="0.06"/>
+
+  <!-- Empty ghost cell (shows grid) -->
+  <rect x="53" y="260" width="130" height="130" rx="12" fill="#2a2a30" fill-opacity="0.2" stroke="#64605a" stroke-opacity="0.12" stroke-width="1"/>
+
+  <!-- === BLOCK 1 : Moss Green — Happy === -->
+  <rect x="53" y="122" width="130" height="130" rx="12" ry="10" fill="#7a8b3d"/>
+  <rect x="53" y="122" width="130" height="130" rx="12" ry="10" fill="none" stroke="#3a2818" stroke-width="4"/>
+  <ellipse cx="80" cy="148" rx="14" ry="10" fill="white" opacity="0.2"/>
+  <ellipse cx="91" cy="164" rx="12" ry="13" fill="white"/>
+  <ellipse cx="91" cy="164" rx="5.5" ry="6" fill="#3a2818"/>
+  <ellipse cx="145" cy="164" rx="12" ry="13" fill="white"/>
+  <ellipse cx="145" cy="164" rx="5.5" ry="6" fill="#3a2818"/>
+  <path d="M 80,210 Q 118,228 156,210" stroke="#3a2818" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- === BLOCK 2 : Rust Red — Grin === -->
+  <rect x="191" y="122" width="130" height="130" rx="10" ry="12" fill="#c4615e"/>
+  <rect x="191" y="122" width="130" height="130" rx="10" ry="12" fill="none" stroke="#3a2818" stroke-width="4"/>
+  <ellipse cx="218" cy="148" rx="14" ry="10" fill="white" opacity="0.2"/>
+  <ellipse cx="229" cy="162" rx="12" ry="13" fill="white"/>
+  <ellipse cx="229" cy="161" rx="5.5" ry="6" fill="#3a2818"/>
+  <ellipse cx="283" cy="162" rx="12" ry="13" fill="white"/>
+  <ellipse cx="283" cy="161" rx="5.5" ry="6" fill="#3a2818"/>
+  <path d="M 222,204 L 290,204 L 288,222 Q 256,234 224,222 Z" fill="#1f0f0a" fill-opacity="0.9"/>
+  <rect x="224" y="204" width="64" height="8" rx="2" fill="white"/>
+
+  <!-- === BLOCK 3 : Eggplant — Surprised === -->
+  <rect x="329" y="122" width="130" height="130" rx="11" ry="13" fill="#7a4878"/>
+  <rect x="329" y="122" width="130" height="130" rx="11" ry="13" fill="none" stroke="#3a2818" stroke-width="4"/>
+  <ellipse cx="356" cy="148" rx="14" ry="10" fill="white" opacity="0.2"/>
+  <ellipse cx="367" cy="164" rx="14" ry="16" fill="white"/>
+  <ellipse cx="367" cy="164" rx="4" ry="4.5" fill="#3a2818"/>
+  <ellipse cx="421" cy="164" rx="14" ry="16" fill="white"/>
+  <ellipse cx="421" cy="164" rx="4" ry="4.5" fill="#3a2818"/>
+  <ellipse cx="394" cy="216" rx="10" ry="12" fill="#1f0f0a" fill-opacity="0.9"/>
+
+  <!-- === BLOCK 4 : Storm Blue — Chill === -->
+  <rect x="191" y="260" width="130" height="130" rx="13" ry="11" fill="#3a4878"/>
+  <rect x="191" y="260" width="130" height="130" rx="13" ry="11" fill="none" stroke="#3a2818" stroke-width="4"/>
+  <ellipse cx="218" cy="286" rx="14" ry="10" fill="white" opacity="0.2"/>
+  <ellipse cx="229" cy="302" rx="12" ry="6" fill="white"/>
+  <ellipse cx="229" cy="303" rx="5" ry="3.5" fill="#3a2818"/>
+  <ellipse cx="283" cy="302" rx="12" ry="6" fill="white"/>
+  <ellipse cx="283" cy="303" rx="5" ry="3.5" fill="#3a2818"/>
+  <path d="M 235,348 Q 256,358 277,348" stroke="#3a2818" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- === BLOCK 5 : Copper — Wink === -->
+  <rect x="329" y="260" width="130" height="130" rx="10" ry="12" fill="#a55838"/>
+  <rect x="329" y="260" width="130" height="130" rx="10" ry="12" fill="none" stroke="#3a2818" stroke-width="4"/>
+  <ellipse cx="356" cy="286" rx="14" ry="10" fill="white" opacity="0.2"/>
+  <ellipse cx="367" cy="302" rx="12" ry="13" fill="white"/>
+  <ellipse cx="367" cy="302" rx="5.5" ry="6" fill="#3a2818"/>
+  <path d="M 408,298 L 421,292 L 434,298" stroke="#3a2818" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 356,348 Q 394,366 432,345" stroke="#3a2818" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Gold dust diamonds (5 — signature Broken Folk) -->
+  <polygon points="42,98 48,108 42,118 36,108" fill="#d4af37"/>
+  <polygon points="478,106 483,114 478,122 473,114" fill="#d4af37" opacity="0.85"/>
+  <polygon points="30,348 35,356 30,364 25,356" fill="#d4af37" opacity="0.7"/>
+  <polygon points="482,368 487,376 482,384 477,376" fill="#d4af37" opacity="0.75"/>
+  <polygon points="256,425 261,433 256,441 251,433" fill="#d4af37" opacity="0.65"/>
+
+  <!-- Subtle gold border -->
+  <rect x="10" y="10" width="492" height="492" rx="100" fill="none" stroke="#d4af37" stroke-width="2.5" opacity="0.2"/>
+</svg>

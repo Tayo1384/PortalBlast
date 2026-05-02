@@ -1,0 +1,218 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwitch01"]
+
+[ext_resource type="Script" path="res://scripts/characters/broken_folk_character.gd" id="1_base"]
+[ext_resource type="Script" path="res://scripts/characters/witch.gd" id="2_witch"]
+
+[node name="Witch" type="Node2D"]
+script = ExtResource("2_witch")
+
+[node name="Body" type="Node2D" parent="."]
+
+[node name="LeftLeg" type="Polygon2D" parent="Body"]
+color = Color(0.227, 0.157, 0.094, 1)
+polygon = PackedVector2Array(-25, 80, -10, 78, -8, 105, -15, 145, -28, 162, -32, 158, -28, 130, -32, 100)
+
+[node name="LeftLegContour" type="Line2D" parent="Body"]
+points = PackedVector2Array(-25, 80, -10, 78, -8, 105, -15, 145, -28, 162, -32, 158, -28, 130, -32, 100, -25, 80)
+width = 2.5
+default_color = Color(0.227, 0.157, 0.094, 1)
+
+[node name="RightLeg" type="Polygon2D" parent="Body"]
+color = Color(0.227, 0.157, 0.094, 1)
+polygon = PackedVector2Array(8, 78, 28, 82, 30, 142, 38, 162, 32, 162, 22, 145, 18, 105)
+
+[node name="RightLegContour" type="Line2D" parent="Body"]
+points = PackedVector2Array(8, 78, 28, 82, 30, 142, 38, 162, 32, 162, 22, 145, 18, 105, 8, 78)
+width = 2.5
+default_color = Color(0.227, 0.157, 0.094, 1)
+
+[node name="Robe" type="Polygon2D" parent="Body"]
+color = Color(0.478, 0.282, 0.471, 1)
+polygon = PackedVector2Array(-42, 12, -48, 35, -42, 70, -38, 85, 38, 85, 48, 70, 42, 35, 38, 8, 28, 0, -28, 0)
+
+[node name="RobeShadow" type="Polygon2D" parent="Body"]
+color = Color(0.353, 0.196, 0.345, 1)
+polygon = PackedVector2Array(-42, 12, -48, 35, -42, 70, -38, 85, -22, 85, -18, 70, -25, 35, -28, 0)
+
+[node name="RobeContour" type="Line2D" parent="Body"]
+points = PackedVector2Array(-42, 12, -48, 35, -42, 70, -38, 85, 38, 85, 48, 70, 42, 35, 38, 8, 28, 0, -28, 0, -42, 12)
+width = 2.5
+default_color = Color(0.227, 0.157, 0.094, 1)
+
+[node name="GoldEmbroidery1" type="Polygon2D" parent="Body"]
+position = Vector2(-10, 40)
+color = Color(0.831, 0.686, 0.216, 0.7)
+polygon = PackedVector2Array(0, -2, 1, 0, 0, 2, -1, 0)
+
+[node name="GoldEmbroidery2" type="Polygon2D" parent="Body"]
+position = Vector2(15, 55)
+color = Color(0.831, 0.686, 0.216, 0.7)
+polygon = PackedVector2Array(0, -2, 1, 0, 0, 2, -1, 0)
+
+[node name="GoldEmbroidery3" type="Polygon2D" parent="Body"]
+position = Vector2(0, 70)
+color = Color(0.831, 0.686, 0.216, 0.7)
+polygon = PackedVector2Array(0, -2, 1, 0, 0, 2, -1, 0)
+
+[node name="RightArm" type="Polygon2D" parent="Body"]
+color = Color(0.478, 0.282, 0.471, 1)
+polygon = PackedVector2Array(38, 30, 50, 35, 65, 60, 70, 80, 60, 82, 52, 65, 42, 50)
+
+[node name="RightArmContour" type="Line2D" parent="Body"]
+points = PackedVector2Array(38, 30, 50, 35, 65, 60, 70, 80, 60, 82, 52, 65, 42, 50, 38, 30)
+width = 2.5
+default_color = Color(0.227, 0.157, 0.094, 1)
+
+[node name="PotionBottle" type="Polygon2D" parent="Body"]
+position = Vector2(64, 88)
+color = Color(0.353, 0.196, 0.345, 1)
+polygon = PackedVector2Array(-7, -3, 7, -3, 8, 12, -8, 12)
+
+[node name="PotionBottleContour" type="Line2D" parent="Body"]
+position = Vector2(64, 88)
+points = PackedVector2Array(-7, -3, 7, -3, 8, 12, -8, 12, -7, -3)
+width = 2.0
+default_color = Color(0.227, 0.157, 0.094, 1)
+
+[node name="PotionLiquid" type="Polygon2D" parent="Body"]
+position = Vector2(64, 92)
+color = Color(0.659, 0.91, 0.784, 0.85)
+polygon = PackedVector2Array(-6, -2, 6, -2, 7, 8, -7, 8)
+
+[node name="PotionCork" type="Polygon2D" parent="Body"]
+position = Vector2(64, 84)
+color = Color(0.6, 0.4, 0.25, 1)
+polygon = PackedVector2Array(-3, -2, 3, -2, 3, 0, -3, 0)
+
+[node name="PotionSmoke" type="Polygon2D" parent="Body"]
+position = Vector2(64, -3)
+color = Color(0.659, 0.91, 0.784, 0.4)
+polygon = PackedVector2Array(-4, 0, 4, 0, 5, 8, -5, 8)
+
+[node name="LeftArm" type="Polygon2D" parent="Body"]
+color = Color(0.478, 0.282, 0.471, 1)
+polygon = PackedVector2Array(-42, 28, -50, 32, -55, 60, -52, 78, -45, 78, -42, 60, -38, 50)
+
+[node name="LeftArmContour" type="Line2D" parent="Body"]
+points = PackedVector2Array(-42, 28, -50, 32, -55, 60, -52, 78, -45, 78, -42, 60, -38, 50, -42, 28)
+width = 2.5
+default_color = Color(0.227, 0.157, 0.094, 1)
+
+[node name="Head" type="Node2D" parent="."]
+position = Vector2(0, -50)
+
+[node name="Neck" type="Polygon2D" parent="Head"]
+color = Color(0.91, 0.784, 0.643, 1)
+polygon = PackedVector2Array(-10, 30, 10, 32, 8, 50, -10, 50)
+
+[node name="Face" type="Polygon2D" parent="Head"]
+color = Color(0.91, 0.784, 0.643, 1)
+polygon = PackedVector2Array(-28, -5, -32, -25, -20, -38, 0, -42, 22, -38, 30, -25, 28, 5, 22, 25, 15, 32, -18, 32, -25, 22)
+
+[node name="FaceContour" type="Line2D" parent="Head"]
+points = PackedVector2Array(-28, -5, -32, -25, -20, -38, 0, -42, 22, -38, 30, -25, 28, 5, 22, 25, 15, 32, -18, 32, -25, 22, -28, -5)
+width = 2.5
+default_color = Color(0.227, 0.157, 0.094, 1)
+
+[node name="HatBrim" type="Polygon2D" parent="Head"]
+color = Color(0.227, 0.157, 0.094, 1)
+polygon = PackedVector2Array(-45, -38, -52, -32, 50, -32, 45, -38, 35, -42, -32, -42)
+
+[node name="HatBrimContour" type="Line2D" parent="Head"]
+points = PackedVector2Array(-45, -38, -52, -32, 50, -32, 45, -38, 35, -42, -32, -42, -45, -38)
+width = 2.5
+default_color = Color(0.227, 0.157, 0.094, 1)
+
+[node name="HatCone" type="Polygon2D" parent="Head"]
+color = Color(0.227, 0.157, 0.094, 1)
+polygon = PackedVector2Array(-32, -42, 35, -42, 32, -55, 28, -68, 18, -85, 8, -100, 0, -98, -8, -85, -15, -68, -22, -55, -28, -50)
+
+[node name="HatConeContour" type="Line2D" parent="Head"]
+points = PackedVector2Array(-32, -42, 35, -42, 32, -55, 28, -68, 18, -85, 8, -100, 0, -98, -8, -85, -15, -68, -22, -55, -28, -50, -32, -42)
+width = 2.5
+default_color = Color(0.227, 0.157, 0.094, 1)
+
+[node name="HatBand" type="Polygon2D" parent="Head"]
+color = Color(0.831, 0.686, 0.216, 1)
+polygon = PackedVector2Array(-32, -42, 35, -42, 33, -48, -30, -48)
+
+[node name="HatStar" type="Polygon2D" parent="Head"]
+position = Vector2(0, -45)
+color = Color(0.831, 0.686, 0.216, 1)
+polygon = PackedVector2Array(0, -3, 1.5, 0, 0, 3, -1.5, 0)
+
+[node name="LeftEyeWhite" type="Polygon2D" parent="Head"]
+color = Color(1, 1, 1, 1)
+polygon = PackedVector2Array(-22, -12, -10, -12, -9, -2, -22, -2)
+
+[node name="LeftEyeContour" type="Line2D" parent="Head"]
+points = PackedVector2Array(-22, -12, -10, -12, -9, -2, -22, -2, -22, -12)
+width = 2.0
+default_color = Color(0.227, 0.157, 0.094, 1)
+
+[node name="RightEyeWhite" type="Polygon2D" parent="Head"]
+color = Color(1, 1, 1, 1)
+polygon = PackedVector2Array(10, -10, 21, -11, 22, -2, 11, -2)
+
+[node name="RightEyeContour" type="Line2D" parent="Head"]
+points = PackedVector2Array(10, -10, 21, -11, 22, -2, 11, -2, 10, -10)
+width = 2.0
+default_color = Color(0.227, 0.157, 0.094, 1)
+
+[node name="LeftPupil" type="Polygon2D" parent="Head"]
+color = Color(0.478, 0.545, 0.239, 1)
+polygon = PackedVector2Array(-19, -10, -14, -10, -14, -5, -19, -5)
+
+[node name="RightPupil" type="Polygon2D" parent="Head"]
+color = Color(0.478, 0.545, 0.239, 1)
+polygon = PackedVector2Array(13, -9, 18, -9, 18, -5, 13, -5)
+
+[node name="LeftEyeShine" type="Polygon2D" parent="Head"]
+color = Color(1, 1, 1, 0.9)
+polygon = PackedVector2Array(-18, -9, -16, -9, -16, -7, -18, -7)
+
+[node name="RightEyeShine" type="Polygon2D" parent="Head"]
+color = Color(1, 1, 1, 0.9)
+polygon = PackedVector2Array(14, -8, 16, -8, 16, -6, 14, -6)
+
+[node name="LeftEyelid" type="Polygon2D" parent="Head"]
+visible = false
+color = Color(0.91, 0.784, 0.643, 1)
+polygon = PackedVector2Array(-22, -12, -10, -12, -9, -2, -22, -2)
+
+[node name="RightEyelid" type="Polygon2D" parent="Head"]
+visible = false
+color = Color(0.91, 0.784, 0.643, 1)
+polygon = PackedVector2Array(10, -10, 21, -11, 22, -2, 11, -2)
+
+[node name="LeftEyebrow" type="Line2D" parent="Head"]
+points = PackedVector2Array(-25, -20, -10, -22)
+width = 2.5
+default_color = Color(0.227, 0.157, 0.094, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="RightEyebrow" type="Line2D" parent="Head"]
+points = PackedVector2Array(10, -20, 22, -18)
+width = 2.0
+default_color = Color(0.227, 0.157, 0.094, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Nose" type="Line2D" parent="Head"]
+points = PackedVector2Array(-2, 3, 3, 12)
+width = 1.5
+default_color = Color(0.6, 0.45, 0.32, 1)
+
+[node name="Mouth" type="Line2D" parent="Head"]
+points = PackedVector2Array(-7, 22, -2, 24, 4, 23, 8, 21)
+width = 1.5
+default_color = Color(0.227, 0.157, 0.094, 1)
+
+[node name="LeftCheek" type="Polygon2D" parent="Head"]
+color = Color(0.91, 0.565, 0.565, 0.4)
+polygon = PackedVector2Array(-26, 10, -18, 12, -18, 18, -26, 16)
+
+[node name="RightCheek" type="Polygon2D" parent="Head"]
+color = Color(0.91, 0.565, 0.565, 0.4)
+polygon = PackedVector2Array(20, 12, 28, 10, 28, 16, 20, 18)

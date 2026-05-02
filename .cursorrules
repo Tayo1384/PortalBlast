@@ -1,0 +1,46 @@
+# PORTAL BLAST — Règles pour Claude Code (Cursor)
+
+## Le projet
+- Jeu mobile Android type "Block Blast" (puzzle grille 8x8)
+- Moteur : Godot 4.3, GDScript uniquement (PAS de C#)
+- Orientation : portrait, résolution 720x1280
+- Style visuel : "Broken Folk" (fait main, asymétrique, conte ancien)
+- Monétisation : AdMob (bannière, interstitiel, rewarded video)
+
+## Style visuel "Broken Folk" — Règles NON-NÉGOCIABLES
+- Palette UNIQUEMENT : #f4ead5 #3a2818 #5a3818 #c4615e #7a8b3d #7a4878 #3a4878 #a55838 #e8c8a4 #f0e8d0 #d4af37
+- Contours en #3a2818 (Old Ink), JAMAIS noir pur (#000000)
+- Épaisseur contours : 2.5px principal, 2.0px intérieur, 1.2px détails
+- Personnages : asymétries obligatoires, yeux désaxés, étoiles dorées flottantes
+- Fond : toujours #f4ead5 (parchemin) ou dégradé terreux
+- JAMAIS de couleurs vives saturées / néon / fluo
+
+## Architecture du code
+- Autoloads : GameManager, AudioManager, AdManager (déjà créés)
+- Personnages : héritent de BrokenFolkCharacter (scripts/characters/broken_folk_character.gd)
+- Scènes dans scenes/, scripts dans scripts/
+- Assets dans assets/ (fonts, sounds, music, textures)
+
+## Conventions
+- Tout le code commenté en français
+- Noms de variables/fonctions en anglais (convention Godot)
+- Noms de fichiers en snake_case
+- Un script par scène
+- Signaux pour communication entre nœuds
+- ConfigFile pour la sauvegarde (user://save_data.cfg)
+
+## Contraintes mobiles
+- Tactile uniquement (InputEventScreenTouch + InputEventScreenDrag)
+- Pas de clavier
+- Touch targets minimum 44x44 dp
+- Orientation portrait forcée
+
+## Gameplay Block Blast — Résumé
+- Grille 8x8 cases
+- 3 pièces proposées en bas, le joueur les place sur la grille
+- Lignes/colonnes complètes s'effacent
+- Combo = plusieurs lignes effacées en même temps = multiplicateur
+- Game over quand aucune pièce ne peut être placée
+- Score : +1 par bloc, +10 par ligne, multiplicateur combo (x2, x3, x5)
+- Les blocs NE TOMBENT PAS (pas comme Tetris)
+- Quand les 3 pièces sont placées, 3 nouvelles apparaissent

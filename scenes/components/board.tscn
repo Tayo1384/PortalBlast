@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/game/board.gd" id="1_board"]
+
+[node name="Board" type="Node2D"]
+script = ExtResource("1_board")
+
+[node name="Border" type="Line2D" parent="."]
+width = 2.5
+default_color = Color(0.4, 0.37, 0.32, 0.7)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2

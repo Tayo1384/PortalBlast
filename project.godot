@@ -1,0 +1,47 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Portal Blast"
+config/description="Puzzle inter-dimensionnel - Style Broken Folk"
+run/main_scene="res://scenes/main_menu.tscn"
+config/version="1.0.0"
+config/features=PackedStringArray("4.6")
+config/icon="res://assets/textures/icon.svg"
+
+[autoload]
+
+GameManager="*res://scripts/autoloads/game_manager.gd"
+AudioManager="*res://scripts/autoloads/audio_manager.gd"
+AdManager="*res://scripts/autoloads/ad_manager.gd"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/stretch/mode="canvas_items"
+window/handheld/orientation=1
+
+[gui]
+
+theme/custom="res://themes/broken_folk_theme.tres"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+renderer/rendering_method="mobile"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/admob/plugin.cfg")
